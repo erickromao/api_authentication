@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   development:{
     client: 'pg',
@@ -5,11 +7,10 @@ module.exports = {
       host:'localhost',
       user:'postgres',
       password:"123",
-      database: "database_users"
+      database: "database"
     },
     migrations:{
-      tableName: 'knex_migrations',
-      directory: './src/database/knex/migrations'
+      directory: path.resolve(__dirname,"src", "database", "knex", "migrations")
     }
   }
 
