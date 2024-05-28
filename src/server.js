@@ -1,10 +1,10 @@
 const express = require('express')
 const router = require('./routes')
-const createDB = require('./database')
+const checkCreateDB = require('./database')
 
 require('dotenv').config()
 
-createDB()
+checkCreateDB()
 
 const app = express()
 const PORT = process.env.PORT || 3000
