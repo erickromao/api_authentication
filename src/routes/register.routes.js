@@ -4,8 +4,8 @@ const registerRouter = Router()
 
 const registerController = new RegisterController()
 
-registerRouter.post("/register", registerController.register)
-
+registerRouter.post("/", registerController.register)
+registerRouter.delete("/:id", registerController.delete)
 
 
 module.exports = registerRouter
